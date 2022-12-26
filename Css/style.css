@@ -1,0 +1,592 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #0078ff;
+
+}
+
+
+header {
+    height: 100vh;
+    background-image: url("../Img/Header/hero-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+nav {
+    background-color: transparent;
+}
+
+.black-layer {
+    height: 100vh;
+    background-color: #00000075;
+    position: relative;
+}
+
+.brand-logo {
+    font-size: 1.7rem;
+}
+
+.navbar-nav li {
+    margin: 0 0.7rem;
+}
+
+.navbar-nav li a {
+    text-align: center;
+    font-size: large;
+    color: white;
+    position: relative;
+}
+
+.navbar-nav li a::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    bottom: 3px;
+    left: 8px;
+    width: 0%;
+    background-color: #fff;
+    visibility: hidden;
+    transition: all 0.3s;
+
+}
+
+.navbar-nav li a:hover {
+    color: #fff;
+}
+
+.navbar-nav li a:hover:before, .navbar-nav li:hover>a:before {
+    visibility: visible;
+    width: 70%;
+}
+
+.navbar-toggler span {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+@media screen and (max-width: 991px) {
+    .navbar-nav li a::before {
+        bottom: 3px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.header-content .row {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header-content .row h1 {
+    font-size: 4.5rem;
+}
+
+.header-content .row p {
+    font-size: 2.5rem;
+    font-weight: 600;
+    visibility: hidden;
+}
+
+.header-content .row p::after {
+    content: "";
+    -webkit-animation-name: Dev-word;
+    animation-name: Dev-word;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+}
+
+
+@media screen and (max-width: 840px) {
+    .header-content .row h1 {
+        font-size: 2.8rem;
+    }
+}
+
+@-webkit-keyframes Dev-word {
+    0% {
+        content: "";
+        visibility: visible;
+    }
+
+    10% {
+        content: "|";
+        visibility: visible;
+    }
+
+    20% {
+        content: "D|";
+        visibility: visible;
+    }
+
+    30% {
+        content: "De|";
+        visibility: visible;
+    }
+
+    40% {
+        content: "Dev|";
+        visibility: visible;
+    }
+
+    50% {
+        content: "Deve|";
+        visibility: visible;
+    }
+
+    60% {
+        content: "Devel|";
+        visibility: visible;
+    }
+
+    70% {
+        content: "Develo|";
+        visibility: visible;
+    }
+
+    80% {
+        content: "Develop|";
+        visibility: visible;
+    }
+
+    90% {
+        content: "Develope|";
+        visibility: visible;
+    }
+
+    100% {
+        content: "Developer|";
+        visibility: visible;
+    }
+
+
+}
+
+@keyframes Dev-word {
+    0% {
+        content: "";
+        visibility: visible;
+    }
+
+    10% {
+        content: "|";
+        visibility: visible;
+    }
+
+    20% {
+        content: "D|";
+        visibility: visible;
+    }
+
+    30% {
+        content: "De|";
+        visibility: visible;
+    }
+
+    40% {
+        content: "Dev|";
+        visibility: visible;
+    }
+
+    50% {
+        content: "Deve|";
+        visibility: visible;
+    }
+
+    60% {
+        content: "Devel|";
+        visibility: visible;
+    }
+
+    70% {
+        content: "Develo|";
+        visibility: visible;
+    }
+
+    80% {
+        content: "Develop|";
+        visibility: visible;
+    }
+
+    90% {
+        content: "Develope|";
+        visibility: visible;
+    }
+
+    100% {
+        content: "Developer|";
+        visibility: visible;
+    }
+
+
+}
+
+
+/* Style section-one */
+.section-one {
+    background-color: #f5f5f5;
+}
+
+.section-one .list span {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.section-one .about-w {
+    position: relative;
+}
+
+.section-one .about-w::before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    background-color: var(--main-color);
+    width: 100px;
+    bottom: -12px;
+}
+
+.section-one .text-About {
+    font-size: 1.2rem;
+}
+
+/* End Style section-one */
+
+/* styling services-section */
+
+.services-section {
+    background-color: #f5f5f5;
+}
+
+.services-section .services-title {
+    position: relative;
+}
+
+.services-section .services-title::after {
+    content: "";
+    position: absolute;
+    width: 10%;
+    top: 95px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 3px;
+    background-color: var(--main-color);
+}
+
+.services-section .services-icon {
+    width: 100px;
+    height: 100px;
+    line-height: 110px;
+    border-radius: 50%;
+    outline: 10px var(--main-color) solid;
+    margin: 2rem auto;
+}
+
+.services-section .services-icon:hover {
+    background-color: var(--main-color);
+    outline-color: rgba(0, 120, 255, 0.5);
+    transition-duration: 0.5s;
+}
+
+.services-section .services-icon i {
+    font-size: 2.3rem;
+}
+
+.services-section .services-icon:hover .ico-ser {
+    color: #fff;
+    transition-duration: 0.5s;
+}
+
+/* End styling services-section */
+
+/* styling btw-services-portfolio */
+
+.btw-services-portfolio {
+    background-image: url("../Img/sections/counters-bg.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+    padding: 9rem 0;
+}
+
+.blue-layer {
+    background-color: rgba(0, 120, 255, 0.5);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.btw-services-portfolio .btw-ico {
+    width: 60px;
+    height: 60px;
+    line-height: 70px;
+    outline: 8px white solid;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.btw-services-portfolio .btw-ico i {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.btw-services-portfolio span {
+    font-size: 1.5rem;
+}
+
+/* End styling btw-services-portfolio */
+
+/* stying portfolio-section*/
+
+.portfolio-section {
+    background-color: #f5f5f5;
+}
+
+.portfolio-section .portfolio-title {
+    position: relative;
+}
+
+.portfolio-section .portfolio-title::after {
+    content: "";
+    position: absolute;
+    width: 10%;
+    top: 95px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 3px;
+    background-color: var(--main-color);
+}
+
+.portfolio-section .card-text {
+    font-size: 1.3rem;
+}
+
+.portfolio-section .card-body span, .p-span {
+    font-size: 0.8rem;
+}
+
+.portfolio-ico {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    margin: 0px 10px 0px 0px;
+    outline: 3px var(--main-color) solid;
+}
+
+.portfolio-ico i {
+    color: var(--main-color);
+    font-size: 1.3rem;
+}
+
+.portfolio-section img:hover {
+    transform: scale(1.2);
+    transition-duration: 1s;
+}
+
+/* End stying portfolio-section*/
+
+/* styling slider-section*/
+.slider-section {
+    background-image: url("../Img/sections/overlay-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 7rem 0;
+    position: relative;
+    /* overflow: auto; */
+}
+
+.name-t {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.layer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 120, 255, 0.5);
+}
+
+/* End styling slider-section*/
+
+/* styling blog-section */
+
+.blog-section {
+    background-color: #f5f5f5;
+}
+
+.blog-section .blog-title {
+    position: relative;
+}
+
+.blog-section .blog-title::after {
+    content: "";
+    position: absolute;
+    width: 10%;
+    top: 95px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 3px;
+    background-color: var(--main-color);
+}
+
+.blog-section .image {
+    position: relative;
+}
+
+.blog-section .image::after {
+    content: "";
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    border-radius: 5px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.2rem 1.2rem;
+    color: #fff;
+    background-color: var(--main-color);
+    transform: translate(-50%, 0);
+}
+
+.blog-section .post-1::after {
+    content: "TRAVEL";
+}
+
+.blog-section .post-2::after, .blog-section .post-3::after {
+    content: "WEB DESIGN";
+}
+
+.blog-section .dd {
+    background-color: #f7f7f7;
+    border: 1px #80808036 solid;
+    width: 100%;
+    margin: auto;
+    padding: 4px 0;
+}
+
+.blog-section .card-title:hover {
+    color: var(--main-color);
+    transition-duration: 1s;
+    cursor: pointer;
+}
+
+/* End styling blog-section */
+
+/* styling form-section */
+.form-section {
+    padding: 5rem;
+    background-image: url("../Img/sections/overlay-bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.f-blue-layer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 120, 255, 0.5);
+}
+
+.form-section h5 {
+    font-size: 2rem;
+    position: relative;
+}
+
+.form-section h5::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    background-color: #0078ff;
+    width: 120px;
+    bottom: -13px;
+    left: 0;
+}
+
+.form-section .txt {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+.form-section ul i {
+    color: var(--main-color);
+    font-size: 1.2rem;
+}
+
+.form-section .cir {
+    width: 40px;
+    height: 40px;
+    line-height: 43px;
+    outline: 5px rgba(0, 120, 255) solid;
+    border-radius: 50%;
+}
+
+.cir i {
+    font-size: 1.4rem !important;
+    color: black !important;
+}
+
+.ul-form li:hover .cir {
+    background-color: var(--main-color);
+    outline: 5px rgba(0, 120, 255, 0.5) solid;
+    transition-duration: 1s;
+}
+
+.ul-form li:hover .cir i {
+    color: #fff !important;
+    transition-duration: 1s;
+}
+
+@media screen and (max-width:765px) {
+    .ul-form {
+        width: 60% !important;
+    }
+}
+
+@media screen and (min-width:766px) and (max-width:1100px) {
+    .ul-form {
+        width: 85% !important;
+    }
+}
+
+@media screen and (min-width:901px) and (max-width:1000px) {
+    .ul-form {
+        width: 62% !important;
+    }
+}
+
+@media screen and (min-width:1001px) and (max-width:1400px) {
+    .ul-form {
+        width: 55% !important;
+    }
+}
+
+/* End styling form-section */
+
+/*  styling footer */
+.footer {
+    background-color: #0062d3;
+}
+
+.footer span {
+    font-weight: bolder;
+}
+
+/* End styling footer */
